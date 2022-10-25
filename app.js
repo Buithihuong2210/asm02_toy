@@ -6,13 +6,13 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var hasbroRouter = require('./routes/hasbro');
+var legoRouter = require('./routes/lego');
 
 var mongoose = require('mongoose')
 var url =
-    'mongodb://localhost:27017/toy'
-
-// var url =
-//     'mongodb+srv://codecode12345:123456789m@cluster0.ik5tvr8.mongodb.net/cloud'
+    // 'mongodb://localhost:27017/toy'
+    'mongodb+srv://Huong:buithihuong2210@atlascluster.jnb6efe.mongodb.net/toy'
+// Huong xinh 
 mongoose.connect(url, { useNewUrlParser: true }, err => {
     if (!err) {
         console.log('DB connect succeed !')
@@ -35,6 +35,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/hasbro', hasbroRouter)
+app.use('/lego', legoRouter)
 
 
 

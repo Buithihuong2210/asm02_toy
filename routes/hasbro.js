@@ -1,6 +1,18 @@
+const { Router } = require('express')
 const express = require('express')
 const HasbroModel = require('../models/HasbroModel')
 const router = express.Router()
+
+
+
+router.get('/main', (req, res) => {
+   HasbroModel.find((err, data) => {
+      if (!err) {
+        //res.send(data)
+        res.render('hasbro/main', { hasbro : data })
+      }
+    })
+   })
 
  router.get('/drop', (req, res) => {
    HasbroModel.deleteMany({}, () => {
@@ -10,12 +22,10 @@ const router = express.Router()
 })
 
 
-//URL: localhost:3000/student
 router.get('/', (req, res) => {
   HasbroModel.find((err, data) => {
     if (!err) {
       //res.send(data)
-      //render ra trang index ở thư mục views/student
       res.render('hasbro/index', { hasbro : data })
     }
   })
@@ -123,6 +133,14 @@ router.get('/sort/desc', (req, res) => {
                })
 })
 
+router.get('/list', (req, res) => {
+   HasbroModel.find((err, data) => {
+     if (!err) {
+      
+       res.render('hasbro/list', { hasbro : data })
+     }
+   })
+ })
 
 
 module.exports = router
