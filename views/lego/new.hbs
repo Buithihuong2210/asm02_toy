@@ -1,9 +1,13 @@
 <div class="container col-md-8 mt-5 ">
-<form action="/hasbro/add" method="post" class="card p-3 bg-light text-center">
+<form action="/lego/add" method="post" class="card p-3 bg-light text-center">
    <h2 class="text text-primary">Add new Lego</h2>
    <div class="form-group">
       <label class="text-success h6">Name</label>
-      <input class="form-control" type="text" name="name" required>
+      <input class="form-control" type="text" name="name" required minlength="3" maxlength="20">
+   </div>
+   <div class="form-group">
+      <label class="text-success h6">SKU</label>
+      <input class="form-control" type="text" name="sku" required minlength="3" maxlength="20">
    </div>
    <div class="form-group mt-3">
       <label class="text-success h6">Price</label>
@@ -18,34 +22,30 @@
       <label class="text-success h6"> Image</label>
       <input class="form-control" type="text" name="image" required>
    </div>
-
-
+   
+   <div class="form-group mt-3">
+      <label class="text-success h6">Date of Manufacture</label>
+      <input class="form-control" type="date" name="dom" required>
+   </div>
+   <div class="form-group mt-3">
+      <label class="text-success h6">Status</label>
+      <input type="checkbox" name="status" value="true">
+   </div>
+   <div class="form-group mt-3">
+      <label class="text-success h6">Toy By Age</label>
+      <select name="toybyage" class="form-control">
+         <option value="">Select Toy By Age</option>
+         <option value="1">3-5 year</option>
+         <option value="2">4-8 year</option>
+         <option value="3">9-11 year</option>
+         <option value="4">Big Kids</option>
+      </select>
+   </div>
    <div class="form-group mt-3">
       <label class="text-success h6">Description</label>
-      <input class="form-control" type="text" name="description">
+      <input class="form-control" type="text" name="description" minlength="3" maxlength="100">
    </div>
-   {{!-- <div class="form-group mt-3">
-      <label class="text-success h6">Student Birthday</label>
-      <input class="form-control" type="date" name="dob" required>
-   </div> --}}
-   {{!-- <div class="form-group mt-3">
-      <label class="text-success h6">Student Year</label>
-      <select name="year" class="form-control">
-         <option value="">Select a year</option>
-         <option value="1">1</option>
-         <option value="2">2</option>
-         <option value="3">3</option>
-         <option value="4">4</option>
-      </select>
-   </div> --}}
-   {{!-- <div class="form-group mt-3">
-      <label class="text-success h6">Student Grade</label>
-      <input class="form-control" type="number" name="grade" required min=0 max=10>
-   </div> --}}
-   {{!-- <div class="form-group mt-3">
-      <label class="text-success h6">Graduated</label>
-      <input type="checkbox" name="graduated" value="true">
-   </div> --}}
+   
    <div class="form-group mt-3">
       <input class="btn btn-primary mt-3" type="submit" value="Add">
    </div>

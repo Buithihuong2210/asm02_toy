@@ -3,9 +3,13 @@ const mongoose = require("mongoose")
 var LegoSchema = new mongoose.Schema(
   {
     name: String,
-    price: Number,
+    sku: String,
     image: String,  
-    description: String
+    price: Number,
+    status: Boolean,
+    dom: Date,
+    description: String,
+    toybyage: String
 
   },
   {

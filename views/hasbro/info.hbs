@@ -135,11 +135,16 @@ body{
       <img src="{{hasbro.image}}" alt="">
     </div>
     <div class="product-details">
-      <span class="product-catagory" style="color: red;">toy, teddy</span>
-      <h4>Name: {{hasbro.name}}</h4>
-      <p>Brand: {{hasbro.sku}}</p>
+      <span class="product-catagory" style="color: red;">toy, hasbro</span>
+      <h4 style="font-weight: bold;">Name: {{hasbro.name}}</h4>
+      
+      <h6 style="font-weight: bold;">Date Of Manufacture: {{dateFormat hasbro.dom "DD/MM/YYYY"}}</h6>
+      <h6 style="font-weight: bold;">Toy By Age: {{hasbro.toybyage}}</h6>
+      <h7>SKU: {{hasbro.sku}}</h7>
+      <p>Description: {{hasbro.description}}</p>
+
       <div class="product-bottom-details">
-        <div class="product-price"><small>$49</small>${{hasbro.price}}</div>
+        <div class="product-price"><small>$799</small>${{hasbro.price}}</div>
         <div class="product-links">
           <a href=""><i class="fa fa-heart"></i></a>
           <a href=""><i class="fa fa-shopping-cart"></i></a>

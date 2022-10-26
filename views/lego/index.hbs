@@ -2,16 +2,24 @@
    <tr>
       <th class="text-primary" colspan="5">Lego List</th>
       <th>
-         <a class="btn btn-primary" href="/lego/add">ADD</a>
+         <div 
+                    </div>
+         <a class="col-sm-4" href="/lego/add">
+                        <button type="button" class="btn btn-info add-new"><i class="fa fa-plus">
+                           
+                        </i> Add New</button></a>
          <a class="btn btn-success" href="/lego/drop"
             onclick="return confirm('Are you sure to drop all lego ?');">DROP</a>
       </th>
    </tr>
    <tr>
       <th>Name</th>
+      <th>Date of Manufacture</th>
+      <th>Image</th>
       <th>Price</th>
-      <th>Price</th>
-      <th>Menu</th>
+      <th>Status</th>
+      {{!-- <th>Toy By Age</th> --}}
+      {{!-- <th>Menu</th> --}}
    </tr>
    <tr>
       <th colspan="4">
@@ -32,26 +40,31 @@
    {{#each lego }}
    <tr>
       <td>{{name}}</td>
-      <td>{{price}}</td>
-      {{!-- <td>{{dateFormat dob "DD/MM/YYYY"}}</td> --}}
+      {{!-- <td>{{sku}}</td> --}}
+      <td>{{dateFormat dom "DD/MM/YYYY"}}</td>
       <td>
          <a href="/lego/detail/{{_id}}">
             <img src="{{image}}" width="100" height="100">
          </a>
       </td>
-      {{!-- <td>
-         {{#equal graduated true}}
-         <span style="color: red; font-weight: bold;">Graduated</span>
-         {{/equal}}
-         {{#equal graduated false}}
-         <span style="color: blue; font-style: italic;">Ungraduated</span>
-         {{/equal}}
-      </td> --}}
-      <td>{{price}}</td>
+      <td>${{price}}</td>
+       
+      <td>
+            {{#equal status true}}
+            <span style="color: red; font-weight: bold;">Stocking</span>
+            {{/equal}}
+            {{#equal status false}}
+            <span style="color: blue; font-weight: bold;">Out of stock</span>
+            {{/equal}}
+         </td>
       <td>
          <a class="btn btn-warning" href="/lego/edit/{{_id}}">EDIT</a>
-         <a class="btn btn-danger" href="/lego/delete/{{_id}}">DELETE</a>
+        
+         
+         <a class="btn btn-danger" href="/lego/delete/{{_id}}"> <i class="fas fa-times"></i> DELETE</a>
       </td>
+
+      
    </tr>
    {{/each}}
 </table>

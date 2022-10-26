@@ -136,8 +136,13 @@ body{
     </div>
     <div class="product-details">
       <span class="product-catagory" style="color: red;">toy, lego</span>
-      <h4>Name: {{lego.name}}</h4>
+      <h4 style="font-weight: bold;">Name: {{lego.name}}</h4>
+      
+      <h6 style="font-weight: bold;">Date Of Manufacture: {{dateFormat lego.dom "DD/MM/YYYY"}}</h6>
+      <h6 style="font-weight: bold;">Toy By Age: {{lego.toybyage}}</h6>
+      <h7>SKU: {{lego.sku}}</h7>
       <p>Description: {{lego.description}}</p>
+
       <div class="product-bottom-details">
         <div class="product-price"><small>$799</small>${{lego.price}}</div>
         <div class="product-links">

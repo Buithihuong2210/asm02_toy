@@ -6,7 +6,10 @@ var HasbroSchema = new mongoose.Schema(
     sku: String,
     image: String,  
     price: Number,
-    // graduated: Boolean
+    status: Boolean,
+    dom: Date,
+    description: String,
+    toybyage: String
   },
   {
     versionKey: false //optional (to remove _v: 0 when add new data)

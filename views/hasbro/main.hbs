@@ -29,16 +29,16 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="d-block w-100" style="height:700px;"
-                        src="https://www.lego.com/cdn/cs/set/assets/blt009499ba796e9496/10257_alt5.jpg" alt="First slide">
+                    <img class="d-block w-100" style="display: contents;"
+                        src="https://img.freepik.com/premium-photo/carousel-european-christmas-fair-miniature-toy-winter-christmas-eve-scene-with-traditional-miniature-village-houses-vintage-toy-night-city-with-carousel_221542-2758.jpg">
                 </div>
                 <div class="carousel-item">
                     <img class="d-block w-100" style="height:700px;" 
-                     src="https://target.scene7.com/is/image/Target/GUEST_7d73166d-06d6-4832-9a4e-4e8df26ed71d?wid=488&hei=488&fmt=pjpeg" alt="Second slide">
+                     src="https://c1.staticflickr.com/5/4257/35093658096_8be430c2fb_b.jpg" alt="Second slide">
                 </div>
                 <div class="carousel-item">
                     <img class="d-block w-100" style="height:700px;"
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0YkYQshR0p2DE7RgS4ruCLLEE_AeJZUr3xw&usqp=CAU"
+                        src="https://www.gannett-cdn.com/authoring/2017/01/20/NCOD/ghows-OH-4676ab16-0712-71be-e053-0100007f9c11-5b5ee3ff.jpeg?crop=1999,1129,x0,y185&width=1999&height=1129&format=pjpg&auto=webp"
                         alt="Third slide">
                 </div>
             </div>
@@ -63,12 +63,11 @@
                             <img class="card-img-top mt-4" src="{{image}}" width="200" height="200">
                         </a>
                         <div class="card-body">
-                            <h4 class="card-title text-success">{{name}}</h4>
-                            <p class="card-text text-danger">${{price}}</p>
-
+                            <h4 class="card-title text-success" style="font-weight: bold;">{{name}}</h4>
+                            <p class="card-text text-danger" style="font-weight: bold;">${{price}}</p>
+                            <p>SKU: {{sku}}</p>
                         </div>
-                        <a href="/hashbro/add"><button class="button"><span>Add to cart </span></button></a>
-
+                        <a href="/hashbro/add"><button class="btn btn-danger"><span>Add to cart </span></button></a>
                     </div>
                     {{/each}}
                 </div>
@@ -90,13 +89,14 @@
         <!-- Images of Me -->
         <div class="w3-row-padding w3-padding-16" id="about">
             <div class="w3-col m6">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvH1ch0xs-ZJ4NAkvZBz5P2ulG69e_gE8dpQ&usqp=CAU"
+                <img src="https://i5.walmartimages.com/asr/3a145ae4-baec-4143-9b4f-c6f592e56a33.12aeb6adf9c9fe2e00115d271dcf9ec5.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF"
                     alt="Lego" style="width:100%">
             </div>
             <div class="w3-col m6">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzmRiXk4_-BvaYkAG0lW2mndTc8yIestsZFw&usqp=CAU7"
-                    alt="Lego" style="width:100%">
+                <img src="https://i5.walmartimages.com/asr/f020ba95-e5f6-44ae-aa2a-81ed300fe96b.ee489021fa34fada4b7a1b403734c257.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF"
+                    alt="Teddy" style="width:100%">
             </div>
+            
         </div>
 
         <div class="w3-container w3-padding-large" style="margin-bottom:32px">

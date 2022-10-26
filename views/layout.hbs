@@ -9,6 +9,7 @@
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   {{!-- icon --}}
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
@@ -16,6 +17,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
   <link rel='stylesheet' href='/stylesheets/style.css' />
      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+     
 </head>
 <style>
   body {
@@ -27,36 +29,101 @@
   {{!-- Header --}}
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-black">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="/hasbro/main">Home</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
-          aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+  <!-- Container wrapper -->
+  <div class="container-fluid">
+    <!-- Navbar brand -->
+    <a class="navbar-brand" href="/hasbro/main">ATN</a>
+
+    <!-- Toggle button -->
+    <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+      data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <i class="fas fa-bars text-light"></i>
+    </button>
+
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Left links -->
+      <ul class="navbar-nav me-auto d-flex flex-row mt-3 mt-lg-0">
+        <li class="nav-item text-center mx-2 mx-lg-1">
+          <a class="nav-link active" aria-current="page" href="/hasbro/main">
+            <div>
+              <i class="fas fa-home fa-lg mb-1"></i>
+            </div>
+            Home
+          </a>
+        </li>
+        
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/hasbro/list">
+              <i class="fas fa-fire mx-2d container" ></i> 
+              <br>
+              TEDDY</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/lego/list">
+              <i class="fas fa-fire mx-2d container" ></i> 
+              <br>
+              LEGO</a>
+            </li>
+
+            
+            <li class="nav-item">
+              <a class="nav-link" href="/lego">
+              <i class="fas fa-plus-circle mx-2d container" ></i> 
+              <br>
+              ADMIN LEGO</a>
+            </li>
+           
+            <li class="nav-item">
+              <a class="nav-link" href="/hasbro">
+              <i class="fas fa-plus-circle mx-2d container" ></i> 
+              <br>
+              ADMIN TEDDY</a>
+            </li>
+            
+          <!-- Dropdown menu -->
+          
+      </ul>
+      <!-- Left links -->
+
+      <!-- Right links -->
+      <ul class="navbar-nav ms-auto d-flex flex-row mt-3 mt-lg-0">
+        <li class="nav-item text-center mx-2 mx-lg-1">
+          <a class="nav-link" href="#!">
+            <div>
+              <i class="fas fa-bell fa-lg mb-1"></i>
+              <span class="badge rounded-pill badge-notification bg-info">11</span>
+            </div>
+            Messages
+          </a>
+        </li>
+        <li class="nav-item text-center mx-2 mx-lg-1">
+          <a class="nav-link" href="#!">
+            <div>
+              <i class="fas fa-globe-americas fa-lg mb-1"></i>
+              <span class="badge rounded-pill badge-notification bg-success">11</span>
+            </div>
+            News
+          </a>
+        </li>
+      </ul>
+      <!-- Right links -->
+
+      <!-- Search form -->
+      <form class="d-flex input-group w-auto ms-lg-3 my-3 my-lg-0">
+        <input type="search" class="form-control" placeholder="Search" aria-label="Search" />
+        <button class="btn btn-primary" type="button" data-mdb-ripple-color="dark"><i class="fas fa-search"></i>
+          Search
         </button>
-        <div class="collapse navbar-collapse" id="navbarScroll">
-          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-
-            <li class="nav-item">
-              <a class="nav-link" href="/hasbro/list">HashBro</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/lego/list">Lego</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/lego">Admin Lego</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/hasbro">Admin Teddy</a>
-            </li>
-
-          </ul>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
-        </div>
-      </div>
-    </nav>
+      </form>
+    </div>
+    <!-- Collapsible wrapper -->
+  </div>
+  <!-- Container wrapper -->
+</nav>
   </header>
 
   {{!-- render ra body các trang webpage --}}

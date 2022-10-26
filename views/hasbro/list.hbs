@@ -8,13 +8,24 @@
             </a>
             <div class="card-body">
                <h4 class="card-title text-success">{{name}}</h4>
+                
+							    <div class="stars">
+							        <i class="fa-solid fa-star fa-lg me-1"></i>
+								    <i class="fa-solid fa-star fa-lg me-1"></i>
+								    <i class="fa-solid fa-star fa-lg me-1"></i>
+								    <i class="fa-solid fa-star fa-lg me-1"></i>
+								    <i class="fa-solid fa-star fa-lg me-2"></i>
+							    </div><!--//stars-->
+						   
                <p class="card-text text-danger">${{price}}</p>
                {{!-- <p class="card-text text-danger">{{sku}}</p> --}}
                         
             </div>
-            <a href="#"><button class="button"><span>Add to cart </span></button></a>
+            <a href="#"><button class="btn btn-danger"><span>Add to cart </span></button></a>
          </div>
+         
          {{/each}}
       </div>
+      
    </div>
 </div>
