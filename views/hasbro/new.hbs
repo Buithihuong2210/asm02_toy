@@ -17,14 +17,28 @@
       <label class="text-success h6"> Image</label>
       <input class="form-control" type="text" name="image" required>
    </div>
+  {{!-- <div>
+   <br>
+   <input  id="default-btn"type="file">
+   <button id=" custom-btn">Choose a file</button>
+   </div> --}}
+   
    <div class="form-group mt-3">
       <label class="text-success h6">Date of Manufacture</label>
       <input class="form-control" type="date" name="dom" required>
    </div>
+
+   <div class="form-group mt3">
+       <label class="text-success h6">User</label><br>
+         Boy <input type="radio" name="user" value="Boy">
+         Girl <input type="radio" name="user" value="Girl">
+      </div>
+
    <div class="form-group mt-3">
       <label class="text-success h6">Status</label>
       <input type="checkbox" name="status" value="true">
    </div>
+   
    <div class="form-group mt-3">
       <label class="text-success h6">Toy By Age</label>
       <select name="toybyage" class="form-control">
