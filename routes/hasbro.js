@@ -67,6 +67,7 @@ router.get('/delete/:id', (req, res) => {
 router.get('/add', (req, res) => {
 // // C1: Dùng "save"
        res.render("hasbro/new");
+
 })
 
 // //nhận & xử lý dữ liệu từ form ADD
@@ -115,17 +116,22 @@ router.post('/search', (req, res) => {
 //sort function
 router.get('/sort/asc', (req, res) => {
    HasbroModel.find()
-               .sort({ name: 1})
+               .sort({ dom: 1})
                .exec((err, data) => {
-                  if (!err) {
-                     res.render('hasbro/index', { hasbro : data})
+                  if (err) {
+                     // res.render('hasbro/index', { hasbro : data})
+                     console.log(err)
+                  }else{
+                  console.log("Sort success")
+                  res.redirect("/hasbro");
                   }
+                  
                })
 })
 
 router.get('/sort/desc', (req, res) => {
    HasbroModel.find()
-               .sort({ name: -1})
+               .sort({ dom: -1})
                .exec((err, data) => {
                   if (!err) {
                      res.render('hasbro/index', { hasbro : data})
