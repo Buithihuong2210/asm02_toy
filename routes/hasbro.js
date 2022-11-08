@@ -35,6 +35,8 @@ router.get('/', (req, res) => {
 router.get('/detail/:id', (req, res) => {
   HasbroModel.findById(req.params.id, (error, hasbro) => {
       if (!error) {
+
+
          res.render('hasbro/info', { hasbro : hasbro })  
       }
    })
@@ -54,10 +56,11 @@ router.get('/delete/:id', (req, res) => {
   HasbroModel.findByIdAndDelete(req.params.id, (err) => {
      if (err) {
         console.log(err)
+        
      } else {
         console.log("Delete hasbro succeed !");
-        //var message = "Delete student succeed !";
-        //redirect về trang /student (URL không phải view)
+        var message = "Delete student succeed !";
+      //   redirect về trang /student (URL không phải view)
         res.redirect("/hasbro");
      }
   })
@@ -65,12 +68,10 @@ router.get('/delete/:id', (req, res) => {
 
 // //render ra form ADD
 router.get('/add', (req, res) => {
-// // C1: Dùng "save"
        res.render("hasbro/new");
 
 })
 
-// //nhận & xử lý dữ liệu từ form ADD
 router.post('/add', (req, res) => {
    var hasbro = new HasbroModel(req.body)
    hasbro.save((err) => {

@@ -9,7 +9,7 @@
                            
                         </i> Add New</button></a>
          <a class="btn btn-success" href="/hasbro/drop"
-            onclick="return confirm('Are you sure to drop all hasbro ?');">DROP</a>
+            onclick="return confirm('Are you sure to delete hasbro ?');">DROP</a>
       </th>
    </tr>
    <tr>
@@ -19,9 +19,6 @@
       <th>Price</th>
       <th>User</th>
       <th>Status</th>
-      
-      {{!-- <th>Toy By Age</th> --}}
-      {{!-- <th>Menu</th> --}}
    </tr>
    <tr>
       <th colspan="4">
@@ -50,7 +47,7 @@
          </a>
       </td>
       <td>${{price}}</td>
-      
+
        <td>{{user}}</td>
       <td>
             {{#equal status true}}
